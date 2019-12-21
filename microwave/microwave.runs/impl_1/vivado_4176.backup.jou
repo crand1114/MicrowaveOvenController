@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Nov 25 12:25:58 2019
+# Process ID: 4176
+# Current directory: C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.runs/impl_1
+# Command line: vivado.exe -log keyboardToFSM.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source keyboardToFSM.tcl -notrace
+# Log file: C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.runs/impl_1/keyboardToFSM.vdi
+# Journal file: C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source keyboardToFSM.tcl -notrace

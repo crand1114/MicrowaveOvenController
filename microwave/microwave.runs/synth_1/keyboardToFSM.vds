@@ -1,0 +1,940 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Nov 25 12:56:04 2019
+# Process ID: 11184
+# Current directory: C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.runs/synth_1
+# Command line: vivado.exe -log keyboardToFSM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source keyboardToFSM.tcl
+# Log file: C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.runs/synth_1/keyboardToFSM.vds
+# Journal file: C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source keyboardToFSM.tcl -notrace
+Command: synth_design -top keyboardToFSM -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2092 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 351.367 ; gain = 101.539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'keyboardToFSM' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:16]
+WARNING: [Synth 8-5640] Port 'ledo' is missing in component declaration [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:50]
+INFO: [Synth 8-3491] module 'Clockdivider' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/clockDivider.vhd:34' bound to instance 'Cdivider' of component 'Clockdivider' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'Clockdivider' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/clockDivider.vhd:40]
+INFO: [Synth 8-4471] merging register 'slowSig_reg' into 'SlowClock_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/clockDivider.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element slowSig_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/clockDivider.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'Clockdivider' (1#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/clockDivider.vhd:40]
+INFO: [Synth 8-3491] module 'ps2_keyboard' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:26' bound to instance 'Keyboard' of component 'ps2_keyboard' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'ps2_keyboard' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:38]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter debounce_counter_size bound to: 8 - type: integer 
+	Parameter counter_size bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/debounce.vhd:27' bound to instance 'debounce_ps2_clk' of component 'debounce' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/debounce.vhd:36]
+	Parameter counter_size bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (2#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/debounce.vhd:36]
+	Parameter counter_size bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/debounce.vhd:27' bound to instance 'debounce_ps2_data' of component 'debounce' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard' (3#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:38]
+INFO: [Synth 8-3491] module 'PS2toBinary' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:6' bound to instance 'Mapping' of component 'PS2toBinary' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'PS2toBinary' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:17]
+WARNING: [Synth 8-614] signal 'tmpCancel' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:25]
+WARNING: [Synth 8-614] signal 'tmpTime' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:25]
+WARNING: [Synth 8-614] signal 'tmpCook' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:25]
+WARNING: [Synth 8-614] signal 'tmpLevel' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'PS2toBinary' (4#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:17]
+INFO: [Synth 8-3491] module 'microwaveFSM' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:7' bound to instance 'FSM' of component 'microwaveFSM' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'microwaveFSM' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:18]
+WARNING: [Synth 8-614] signal 'doorStatus' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'userIN' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'cType' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'customP' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'customT' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'level' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'power' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'setTime' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+WARNING: [Synth 8-614] signal 'timesUP' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'microwaveFSM' (5#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:18]
+INFO: [Synth 8-3491] module 'timer' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/timer.vhd:6' bound to instance 'TimerComp' of component 'timer' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'timer' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/timer.vhd:12]
+WARNING: [Synth 8-614] signal 'timeSet' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/timer.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'timer' (6#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/timer.vhd:12]
+INFO: [Synth 8-3491] module 'vgaController' declared at 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:6' bound to instance 'Display' of component 'vgaController' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'vgaController' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:13]
+WARNING: [Synth 8-6014] Unused sequential element cntImg_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:802]
+WARNING: [Synth 8-6014] Unused sequential element clkColor_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:805]
+INFO: [Synth 8-256] done synthesizing module 'vgaController' (7#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:13]
+WARNING: [Synth 8-3848] Net nodeDisplay in module/entity keyboardToFSM does not have driver. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:10]
+WARNING: [Synth 8-3848] Net timeDisplay in module/entity keyboardToFSM does not have driver. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'keyboardToFSM' (8#1) [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/top.vhd:16]
+WARNING: [Synth 8-3331] design vgaController has unconnected port reset
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[3]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[2]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[1]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[0]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[6]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[5]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[4]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[3]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[2]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[1]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 503.563 ; gain = 253.734
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 503.563 ; gain = 253.734
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc]
+WARNING: [Vivado 12-584] No ports matched 'stateO[9]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[8]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[7]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[6]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[5]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[4]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'stateO[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[9]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[8]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[7]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[6]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[5]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[4]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tme[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'userIN[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'userIN[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'userIN[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'checkIN'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cncl'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'checkIN'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cncl'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/imports/new/fsmTest.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/keyboardToFSM_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/keyboardToFSM_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc]
+WARNING: [Vivado 12-584] No ports matched 'b[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[3]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[2]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[1]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'r[0]'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vS'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hS'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hS'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vS'. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/constrs_1/new/vga.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/keyboardToFSM_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/keyboardToFSM_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 862.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element counter_out_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/debounce.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element count_idle_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:93]
+INFO: [Synth 8-5546] ROM "tmpCancel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'microwaveFSM'
+INFO: [Synth 8-5544] ROM "ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element cntHorz_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:719]
+WARNING: [Synth 8-6014] Unused sequential element cnt1_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:737]
+WARNING: [Synth 8-6014] Unused sequential element cnt3_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:743]
+WARNING: [Synth 8-6014] Unused sequential element cnt5_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:749]
+WARNING: [Synth 8-6014] Unused sequential element cntVert_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:763]
+WARNING: [Synth 8-6014] Unused sequential element cnt2_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:780]
+WARNING: [Synth 8-6014] Unused sequential element cnt4_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:786]
+INFO: [Synth 8-5544] ROM "node0[0]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "node1[0]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "node2[3]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element cnt2_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:780]
+WARNING: [Synth 8-327] inferring latch for variable 'tmpTime_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'tmpCancel_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:27]
+WARNING: [Synth 8-327] inferring latch for variable 'tmpCook_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:28]
+WARNING: [Synth 8-327] inferring latch for variable 'tmpLevel_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/codeToBinary.vhd:30]
+WARNING: [Synth 8-327] inferring latch for variable 'ns_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'ns_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:29]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 standby |                      00000000001 |                             0000
+                 inpower |                      00000000010 |                             0110
+                  intime |                      00000000100 |                             0111
+                      c1 |                      00000001000 |                             0001
+                      c2 |                      00000010000 |                             0010
+                      c3 |                      00000100000 |                             0011
+                      c4 |                      00001000000 |                             0100
+                      c5 |                      00010000000 |                             0101
+                    cook |                      00100000000 |                             1000
+                   pause |                      01000000000 |                             1001
+                finished |                      10000000000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'microwaveFSM'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'userIN_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:48]
+WARNING: [Synth 8-327] inferring latch for variable 'customT_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:72]
+WARNING: [Synth 8-327] inferring latch for variable 'power_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:71]
+WARNING: [Synth 8-327] inferring latch for variable 'tme_reg' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/fsm.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[0]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[1]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[2]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[3]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[4]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[5]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[6]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[16]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[19]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[29]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node1_reg[30]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:669]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[0]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[1]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[2]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[3]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[4]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[5]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[6]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[16]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[19]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[29]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node2_reg[30]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:686]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[0]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[1]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[2]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[3]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[4]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[5]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[6]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[16]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[19]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[29]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+WARNING: [Synth 8-327] inferring latch for variable 'node0_reg[30]' [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:652]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 67    
+	  13 Input     32 Bit        Muxes := 14    
+	   3 Input     32 Bit        Muxes := 5     
+	  14 Input     32 Bit        Muxes := 14    
+	   4 Input     32 Bit        Muxes := 14    
+	  10 Input     32 Bit        Muxes := 8     
+	  15 Input     32 Bit        Muxes := 6     
+	  16 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 6     
+	  38 Input     11 Bit        Muxes := 1     
+	  21 Input     10 Bit        Muxes := 1     
+	  11 Input     10 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 3     
+	  21 Input      6 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  21 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	  11 Input      3 Bit        Muxes := 2     
+	  21 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	  11 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Clockdivider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module debounce 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module ps2_keyboard 
+Detailed RTL Component Info : 
++---XORs : 
+	   9 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module PS2toBinary 
+Detailed RTL Component Info : 
++---Muxes : 
+	  21 Input     10 Bit        Muxes := 1     
+	  21 Input      6 Bit        Muxes := 1     
+	  21 Input      3 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module microwaveFSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	  38 Input     11 Bit        Muxes := 1     
+	  11 Input     10 Bit        Muxes := 3     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	  11 Input      3 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 6     
+Module timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module vgaController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 67    
+	  13 Input     32 Bit        Muxes := 14    
+	   3 Input     32 Bit        Muxes := 5     
+	  14 Input     32 Bit        Muxes := 14    
+	   4 Input     32 Bit        Muxes := 14    
+	  10 Input     32 Bit        Muxes := 8     
+	  15 Input     32 Bit        Muxes := 6     
+	  16 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "AS2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "O342" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "O372" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "node2[16]2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "O522" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "O542" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element cntHorz_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:719]
+WARNING: [Synth 8-6014] Unused sequential element cntVert_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:763]
+WARNING: [Synth 8-6014] Unused sequential element cnt3_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:743]
+WARNING: [Synth 8-6014] Unused sequential element cnt4_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:786]
+WARNING: [Synth 8-6014] Unused sequential element cnt5_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:749]
+WARNING: [Synth 8-6014] Unused sequential element cnt1_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/new/vgaController.vhd:737]
+WARNING: [Synth 8-6014] Unused sequential element Cdivider/ledO_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/new/clockDivider.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element Keyboard/ps2_code_new_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:99]
+INFO: [Synth 8-5546] ROM "Mapping/tmpCancel" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element Keyboard/debounce_ps2_clk/counter_out_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/debounce.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element Keyboard/debounce_ps2_data/counter_out_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/debounce.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element Keyboard/count_idle_reg was removed.  [C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.srcs/sources_1/imports/imports/Desktop/ps2_keyboard.vhd:93]
+WARNING: [Synth 8-3331] design vgaController has unconnected port reset
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[3]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[2]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[1]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port nodeDisplay[0]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[6]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[5]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[4]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[3]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[2]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[1]
+WARNING: [Synth 8-3331] design keyboardToFSM has unconnected port timeDisplay[0]
+INFO: [Synth 8-3886] merging instance 'Mapping/tmpTime_reg[0]' (LD) to 'Mapping/tmpTime_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mapping/tmpTime_reg[1] )
+INFO: [Synth 8-3886] merging instance 'FSM/customT_reg[7]' (LD) to 'FSM/customT_reg[9]'
+INFO: [Synth 8-3886] merging instance 'FSM/customT_reg[6]' (LD) to 'FSM/customT_reg[9]'
+INFO: [Synth 8-3886] merging instance 'FSM/customT_reg[8]' (LD) to 'FSM/customT_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\FSM/customT_reg[9] )
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][0]' (LDC) to 'Display/node0_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][0]' (LDC) to 'Display/node0_reg[29][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][0]' (LDC) to 'Display/node0_reg[19][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][0]' (LDC) to 'Display/node0_reg[16][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][0]' (LDC) to 'Display/node0_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][0]' (LDC) to 'Display/node0_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][0]' (LDC) to 'Display/node0_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][0]' (LDC) to 'Display/node0_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][0]' (LDC) to 'Display/node0_reg[19][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][0]' (LDC) to 'Display/node0_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][0]' (LDC) to 'Display/node0_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][1]' (LDC) to 'Display/node0_reg[30][30]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][1]' (LDC) to 'Display/node0_reg[29][30]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][1]' (LDC) to 'Display/node0_reg[19][10]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][1]' (LDC) to 'Display/node0_reg[16][30]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][1]' (LDC) to 'Display/node0_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][1]' (LDC) to 'Display/node0_reg[2][30]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][1]' (LDC) to 'Display/node0_reg[1][30]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][1]' (LDC) to 'Display/node0_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][1]' (LDC) to 'Display/node0_reg[19][10]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][1]' (LDC) to 'Display/node0_reg[5][10]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][1]' (LDC) to 'Display/node0_reg[4][10]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][2]' (LDP) to 'Display/node0_reg[30][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][2]' (LDP) to 'Display/node0_reg[29][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][2]' (LDP) to 'Display/node0_reg[19][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][2]' (LDP) to 'Display/node0_reg[16][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][2]' (LDP) to 'Display/node0_reg[3][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][2]' (LDP) to 'Display/node0_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][2]' (LDP) to 'Display/node0_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][2]' (LDP) to 'Display/node0_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][2]' (LDP) to 'Display/node0_reg[6][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][2]' (LDP) to 'Display/node0_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][2]' (LDP) to 'Display/node0_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][3]' (LDP) to 'Display/node0_reg[30][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][3]' (LDP) to 'Display/node0_reg[29][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][3]' (LDP) to 'Display/node0_reg[19][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][3]' (LDP) to 'Display/node0_reg[16][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][3]' (LDP) to 'Display/node0_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][3]' (LDP) to 'Display/node0_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][3]' (LDP) to 'Display/node0_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][3]' (LDP) to 'Display/node0_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][3]' (LDP) to 'Display/node0_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][3]' (LDP) to 'Display/node0_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][4]' (LDP) to 'Display/node0_reg[30][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][4]' (LDP) to 'Display/node0_reg[29][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][4]' (LDP) to 'Display/node0_reg[19][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][4]' (LDP) to 'Display/node0_reg[16][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][4]' (LDP) to 'Display/node0_reg[3][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][4]' (LDP) to 'Display/node0_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][4]' (LDP) to 'Display/node0_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][4]' (LDP) to 'Display/node0_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][4]' (LDP) to 'Display/node0_reg[6][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][4]' (LDP) to 'Display/node0_reg[5][5]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][5]' (LDP) to 'Display/node0_reg[30][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][5]' (LDP) to 'Display/node0_reg[29][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][5]' (LDP) to 'Display/node0_reg[19][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][5]' (LDP) to 'Display/node0_reg[16][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][5]' (LDP) to 'Display/node0_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][5]' (LDP) to 'Display/node0_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][5]' (LDP) to 'Display/node0_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][5]' (LDP) to 'Display/node0_reg[6][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][5]' (LDP) to 'Display/node0_reg[5][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][5]' (LDP) to 'Display/node0_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][6]' (LDP) to 'Display/node0_reg[30][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][6]' (LDP) to 'Display/node0_reg[29][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][6]' (LDP) to 'Display/node0_reg[19][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][6]' (LDP) to 'Display/node0_reg[16][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][6]' (LDP) to 'Display/node0_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][6]' (LDP) to 'Display/node0_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][6]' (LDP) to 'Display/node0_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][6]' (LDP) to 'Display/node0_reg[6][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][6]' (LDP) to 'Display/node0_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][6]' (LDP) to 'Display/node0_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][7]' (LDP) to 'Display/node0_reg[30][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][7]' (LDP) to 'Display/node0_reg[29][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][7]' (LDP) to 'Display/node0_reg[19][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][7]' (LDP) to 'Display/node0_reg[16][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][7]' (LDP) to 'Display/node0_reg[3][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][7]' (LDP) to 'Display/node0_reg[2][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[0][7]' (LDP) to 'Display/node0_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][7]' (LDP) to 'Display/node0_reg[6][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][7]' (LDP) to 'Display/node0_reg[5][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][7]' (LDP) to 'Display/node0_reg[4][8]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][8]' (LDP) to 'Display/node0_reg[30][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][8]' (LDP) to 'Display/node0_reg[29][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][8]' (LDP) to 'Display/node0_reg[19][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[16][8]' (LDP) to 'Display/node0_reg[16][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[3][8]' (LDP) to 'Display/node0_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[2][8]' (LDP) to 'Display/node0_reg[2][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[1][8]' (LDP) to 'Display/node0_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[6][8]' (LDP) to 'Display/node0_reg[6][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[5][8]' (LDP) to 'Display/node0_reg[5][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[4][8]' (LDP) to 'Display/node0_reg[4][9]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[30][10]' (LDP) to 'Display/node0_reg[30][11]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[29][10]' (LDP) to 'Display/node0_reg[29][20]'
+INFO: [Synth 8-3886] merging instance 'Display/node0_reg[19][10]' (LDC) to 'Display/node0_reg[19][20]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[29][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node0_reg[4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[29][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Display/\node1_reg[4][31] )
+WARNING: [Synth 8-3332] Sequential element (Mapping/tmpTime_reg[1]) is unused and will be removed from module keyboardToFSM.
+WARNING: [Synth 8-3332] Sequential element (FSM/customT_reg[9]) is unused and will be removed from module keyboardToFSM.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[0][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[1][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[2][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[3][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[4][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[5][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[16][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node1_reg[29][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[0][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[1][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[2][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[3][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[4][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[5][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[16][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (node0_reg[29][31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[5]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[6]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[7]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[8]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[9]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[10]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[11]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[12]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[13]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[14]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[15]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[16]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[17]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[18]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[19]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[20]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[21]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[22]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[23]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[24]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[25]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[26]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[27]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[28]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[29]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[30]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt3_reg[31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[5]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[6]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[7]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[8]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[9]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[10]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[11]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[12]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[13]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[14]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[15]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[16]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[17]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[18]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[19]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[20]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[21]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[22]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[23]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[24]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[25]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[26]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[27]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[28]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[29]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[30]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt4_reg[31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[5]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[6]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[7]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[8]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[9]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[10]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[11]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[12]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[13]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[14]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[15]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[16]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[17]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[18]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[19]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[20]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[21]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[22]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[23]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[24]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[25]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[26]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[27]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[28]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[29]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[30]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt5_reg[31]) is unused and will be removed from module vgaController.
+WARNING: [Synth 8-3332] Sequential element (cnt1_reg[5]) is unused and will be removed from module vgaController.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    18|
+|3     |LUT1   |    17|
+|4     |LUT2   |    53|
+|5     |LUT3   |    38|
+|6     |LUT4   |   103|
+|7     |LUT5   |    68|
+|8     |LUT6   |   127|
+|9     |MUXF7  |     4|
+|10    |FDCE   |    21|
+|11    |FDPE   |     1|
+|12    |FDRE   |   129|
+|13    |FDSE   |     2|
+|14    |LD     |    50|
+|15    |LDC    |    11|
+|16    |LDP    |    41|
+|17    |IBUF   |     6|
+|18    |OBUF   |    19|
+|19    |OBUFT  |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+--------------+------+
+|      |Instance              |Module        |Cells |
++------+----------------------+--------------+------+
+|1     |top                   |              |   720|
+|2     |  Cdivider            |Clockdivider  |    36|
+|3     |  Display             |vgaController |   268|
+|4     |  FSM                 |microwaveFSM  |   120|
+|5     |  Keyboard            |ps2_keyboard  |   120|
+|6     |    debounce_ps2_clk  |debounce      |    26|
+|7     |    debounce_ps2_data |debounce_0    |    25|
+|8     |  Mapping             |PS2toBinary   |    28|
+|9     |  TimerComp           |timer         |   111|
++------+----------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 205 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 862.574 ; gain = 253.734
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 862.574 ; gain = 612.746
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 130 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 102 instances were transformed.
+  LD => LDCE: 50 instances
+  LDC => LDCE: 11 instances
+  LDP => LDPE: 41 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+174 Infos, 264 Warnings, 55 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 862.574 ; gain = 624.754
+INFO: [Common 17-1381] The checkpoint 'C:/Users/student/Desktop/MicrowaveFinal/microwave/microwave.runs/synth_1/keyboardToFSM.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file keyboardToFSM_utilization_synth.rpt -pb keyboardToFSM_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 862.574 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 25 12:56:49 2019...

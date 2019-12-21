@@ -1,0 +1,185 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Nov 25 12:57:37 2019
+| Host         : DESKTOP-C4F8K0T running 64-bit major release  (build 9200)
+| Command      : report_drc -file keyboardToFSM_drc_routed.rpt -pb keyboardToFSM_drc_routed.pb -rpx keyboardToFSM_drc_routed.rpx
+| Design       : keyboardToFSM
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 28
++----------+----------+-----------------------------------------------------+------------+
+| Rule     | Severity | Description                                         | Violations |
++----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| PDRC-153 | Warning  | Gated clock check                                   | 27         |
++----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net FSM/customT_reg[5]_i_1_n_0 is a gated clock net sourced by a combinational pin FSM/customT_reg[5]_i_1/O, cell FSM/customT_reg[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net FSM/ns is a gated clock net sourced by a combinational pin FSM/FSM_onehot_ns_reg[10]_i_2/O, cell FSM/FSM_onehot_ns_reg[10]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net FSM/power_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM/power_reg[2]_i_2/O, cell FSM/power_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net FSM/tme_reg[9]_i_2_n_0 is a gated clock net sourced by a combinational pin FSM/tme_reg[9]_i_2/O, cell FSM/tme_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net FSM/userIN_reg[2]_i_1_n_0 is a gated clock net sourced by a combinational pin FSM/userIN_reg[2]_i_1/O, cell FSM/userIN_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net Keyboard/E[0] is a gated clock net sourced by a combinational pin Keyboard/tmpTime_reg[9]_i_2/O, cell Keyboard/tmpTime_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net TimerComp/E[0] is a gated clock net sourced by a combinational pin TimerComp/node0_reg[19][9]_i_2/O, cell TimerComp/node0_reg[19][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_10 is a gated clock net sourced by a combinational pin TimerComp/node1_reg[4][9]_i_2/O, cell TimerComp/node1_reg[4][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_12[0] is a gated clock net sourced by a combinational pin TimerComp/node1_reg[30][31]_i_2/O, cell TimerComp/node1_reg[30][31]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_12[1] is a gated clock net sourced by a combinational pin TimerComp/node1_reg[30][29]_i_1/O, cell TimerComp/node1_reg[30][29]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_12[2] is a gated clock net sourced by a combinational pin TimerComp/node1_reg[30][9]_i_2/O, cell TimerComp/node1_reg[30][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_13 is a gated clock net sourced by a combinational pin TimerComp/node1_reg[0][9]_i_2/O, cell TimerComp/node1_reg[0][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_14[0] is a gated clock net sourced by a combinational pin TimerComp/node1_reg[16][21]_i_1/O, cell TimerComp/node1_reg[16][21]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_14[1] is a gated clock net sourced by a combinational pin TimerComp/node1_reg[16][9]_i_2/O, cell TimerComp/node1_reg[16][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_15[0] is a gated clock net sourced by a combinational pin TimerComp/node1_reg[19][9]_i_2/O, cell TimerComp/node1_reg[19][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_19 is a gated clock net sourced by a combinational pin TimerComp/node1_reg[0][8]_i_2/O, cell TimerComp/node1_reg[0][8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_26 is a gated clock net sourced by a combinational pin TimerComp/node1_reg[0][19]_i_2/O, cell TimerComp/node1_reg[0][19]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_27 is a gated clock net sourced by a combinational pin TimerComp/node0_reg[4][9]_i_2/O, cell TimerComp/node0_reg[4][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_30[0] is a gated clock net sourced by a combinational pin TimerComp/node0_reg[30][31]_i_2/O, cell TimerComp/node0_reg[30][31]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_30[1] is a gated clock net sourced by a combinational pin TimerComp/node0_reg[30][29]_i_1/O, cell TimerComp/node0_reg[30][29]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_30[2] is a gated clock net sourced by a combinational pin TimerComp/node0_reg[30][9]_i_2/O, cell TimerComp/node0_reg[30][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_31 is a gated clock net sourced by a combinational pin TimerComp/node0_reg[0][9]_i_2/O, cell TimerComp/node0_reg[0][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_32[0] is a gated clock net sourced by a combinational pin TimerComp/node0_reg[16][21]_i_1/O, cell TimerComp/node0_reg[16][21]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_32[1] is a gated clock net sourced by a combinational pin TimerComp/node0_reg[16][9]_i_2/O, cell TimerComp/node0_reg[16][9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_36 is a gated clock net sourced by a combinational pin TimerComp/node0_reg[0][8]_i_2/O, cell TimerComp/node0_reg[0][8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_43 is a gated clock net sourced by a combinational pin TimerComp/node0_reg[0][19]_i_2/O, cell TimerComp/node0_reg[0][19]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net TimerComp/rgbOut[2]_8[0] is a gated clock net sourced by a combinational pin TimerComp/node2_reg[16][19]_i_1/O, cell TimerComp/node2_reg[16][19]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+
